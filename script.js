@@ -5,7 +5,7 @@ let male = document.getElementById("m");
 let female = document.getElementById("f");
 let form = document.getElementById("form");
 
-validateForm = () => {
+function validateForm() {
     if (age.value == '' || height.value == '' || weight.value == '' ||
     (male.checked == false && female.checked == false)) {
         alert("All fields are required!");
@@ -17,7 +17,7 @@ validateForm = () => {
 
 document.getElementById("submit").addEventListener("click", validateForm);
 
-countBmi = () => {
+function countBmi() {
     let p = [age.value, height.value, weight.value];
     if(male.checked){
         p.push("male");
